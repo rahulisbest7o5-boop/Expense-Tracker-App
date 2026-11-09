@@ -1,0 +1,10 @@
+digraph G { graph [rankdir=TB,bgcolor="transparent",nodesep="0.28",ranksep="0.50",pad="0.1",splines=polyline,label="SpendAhead  ·  Interface architecture",labelloc=t,fontname="Lato",fontsize=22,fontcolor="#146C73"];node [shape=box,style="filled,rounded",fontname="Lato",fontsize=12,margin="0.20,0.13",color="#C4DDDA",fillcolor="#F2F8F7",fontcolor="#19323A"];edge [fontname="Lato",color="#477E83",fontsize=10,arrowsize=0.7]; app [label="Android app shell
+5-tab bottom navigation + global add action",fillcolor="#E2F3EF"]; h [label="Home
+Allowance, net, budget, recent"]; hi [label="History
+Month filter / edit entry"]; ch [label="Charts
+Categories / six-month trends"]; bi [label="Bills
+Add / mark paid / delete"]; se [label="Settings
+Plan / budget / privacy"]; trans [label="Entry dialog
+Add / edit / delete",fillcolor="#FFF4E6"]; prev [label="Purchase preview dialog
+Read-only calculation",fillcolor="#FFF4E6"]; budget [label="Budget section
+Within Home + Settings",fillcolor="#FFF4E6"]; app->{h hi ch bi se};h->prev;h->bi [label="Manage bills"];h->se [label="Edit plan"];app->trans [label="+ from 4 tabs"];hi->trans [label="Edit record"];h->budget [style=dashed];se->budget [style=dashed]; }
